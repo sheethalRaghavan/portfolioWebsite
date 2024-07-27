@@ -1,0 +1,273 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#F7EFF6;
+}
+
+/* General Styles */
+body {
+    font-family: "Quicksand", Arial, sans-serif;
+    background-color:linear-gradient(45deg, #f06595, #ff6b6b); /* Light blue-gray background */
+    color: black;
+    padding: 29px;
+    line-height: 1.9;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    
+    background-color: linear-gradient(45deg, #f06595, #ff6b6b); /* Bright blue background */
+    
+    border-radius: 8px;
+    animation: slideIn 1s ease-out;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+   
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+section {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #e3f2fd; /* Light pastel blue */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #0056b3; /* Dark blue */
+    font-size: 2rem;
+    animation: bounceIn 1s;
+    background:linear-gradient(45deg, #f06595, #ff6b6b);; /* Gradient colors */
+    -webkit-background-clip: text; /* For WebKit browsers */
+    -webkit-text-fill-color: transparent; /* For WebKit browsers */
+    background-clip: text; /* For non-WebKit browsers */
+    color: transparent;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #f1f8e9; /* Light pastel green */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33% - 20px);
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #e8f5e9; /* Lighter pastel green on hover */
+}
+
+.project-card img {
+    width: 100%;
+    border-bottom: 3px solid #007bff; /* Bright blue border */
+    transition: transform 0.3s ease;
+}
+
+.project-card img:hover {
+    transform: scale(1.1);
+}
+
+.project-card h3 {
+    margin: 15px 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    color: #666; /* Medium gray */
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff; /* Text color */
+    background: linear-gradient(45deg, #f06595, #ff6b6b); /* Dark blue gradient */
+    border-radius: 50px;
+    border:  #ff6b6b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #f06595, #ff6b6b); /* Slightly darker blue gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);     
+}
+
+.btn.active {
+    background: linear-gradient(45deg, #f06595, #ff6b6b);/* Even darker blue gradient on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #007bff; /* Bright blue background */
+    color: #fff;
+    border-radius: 8px;
+    animation: slideIn 1s ease-out;
+}
+
+.container {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width:994px;;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.project-section {
+    margin-bottom: 40px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: calc(33% - 10px);
+    max-width: 250px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .image-gallery img {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery img {
+        width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
