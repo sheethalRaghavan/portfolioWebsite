@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Project</title>
+    <link rel="stylesheet" href="css/powerbistyle.css">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <h1>My Projects</h1>
+
+        <!-- Project 1 Section -->
+        <div class="project-section">
+            <h2>Climate Change and Global Warming</h2>
+            <div class="project-content">
+                <b>🔍 Data Cleaning:</b> Utilized Pandas for data cleaning and preparation.<br>
+                <b>📊 Visualizations:</b><br>
+                <b>📈 Power BI Dashboards:</b> Developed interactive visualizations to explore key insights.<br>                    
+                <b>📈 Matplotlib for Static Visualizations:</b> Created the following plots:<br>                    
+                ▪ Average Temperature Over Time<br>
+                ▪ Average Temperature by Country<br>
+                ▪ Temperature Based on Latitudes<br>
+                ▪ Distribution of Temperature Uncertainty<br>
+                ▪ Top 20 Cities with the Highest Average Temperature<br>
+                ▪ 10-Year Rolling Average of Global Temperature<br>                    
+                <b>📈 Statistical Analysis:</b><br>
+                <b>▪ Latitude vs. Average Temperature:</b> Analyzed with a regression line using linear regression.<br>
+                <b>▪ Hypothesis Testing:</b> Conducted a t-test to assess the statistical significance of temperature increases after 2023.<br>
+                <b>▪ Descriptive Statistics:</b> Summarized data distributions, including mean, median, standard deviation, and quantiles.<br>                                    
+                    
+                <!-- Image Gallery -->
+                <div class="image-gallery">
+                    <img src="images/img1.jpeg" alt="Project Screenshot 1" onclick="openLightbox(this.src)">
+                    <img src="images/img2.jpeg" alt="Project Screenshot 2" onclick="openLightbox(this.src)">
+                    <img src="images/img3.jpeg" alt="Project Screenshot 3" onclick="openLightbox(this.src)">
+                    <img src="images/img4.jpeg" alt="Project Screenshot 4" onclick="openLightbox(this.src)">
+                    <img src="images/img5.jpeg" alt="Project Screenshot 5" onclick="openLightbox(this.src)">
+                    <img src="images/img6.jpeg" alt="Project Screenshot 6" onclick="openLightbox(this.src)">
+                    <img src="images/img7.jpeg" alt="Project Screenshot 7" onclick="openLightbox(this.src)">
+                    <img src="images/img8.jpeg" alt="Project Screenshot 8" onclick="openLightbox(this.src)">
+                    <img src="images/img9.jpeg" alt="Project Screenshot 9" onclick="openLightbox(this.src)">
+                </div>
+
+                <!-- Lightbox container -->
+                <div id="lightbox" class="lightbox">
+                    <span class="close" onclick="closeLightbox()">&times;</span>
+                    <img id="lightbox-img" src="">
+                </div>
+
+            </div>
+            <br> 
+            <a href="index.html#project-section" class="btn">Back to Portfolio</a>
+        </div>
+    </div>
+
+    <!-- JavaScript for Lightbox -->
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = "block";
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = "none";
+        }
+    </script>
+    
+</body>
+</html>

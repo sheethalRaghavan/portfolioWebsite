@@ -5,6 +5,55 @@
     box-sizing: border-box;
     background-color:#F7EFF6;
 }
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Close button styling */
+.close {
+color: black; /* Change to a darker color */
+font-size: 30px; /* Increase size */
+position: absolute;
+top: 10px;
+right: 10px;
+background-color: lightgray; /* Add background color */
+padding: 5px; /* Add some padding */
+border-radius: 50%; /* Make it circular for better visibility */
+}
+
+
+/* Image gallery styling */
+.image-gallery img {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect to slightly enlarge the image */
+.image-gallery img:hover {
+    transform: scale(1.1);
+}
 
 /* General Styles */
 body {

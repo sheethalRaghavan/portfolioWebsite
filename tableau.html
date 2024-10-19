@@ -5,64 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau Projects</title>
     <link rel="stylesheet" href="css/powerbistyle.css">
+   
 </head>
 <body>
     <div class="container">
         <h1>My Projects</h1>
 
- <!-- Project 1 Section -->
+        <!-- Project 1 Section -->
         <div class="project-section">
-            <h2>HR Dsashboard</h2>
+            <h2>HR Dashboard</h2>
             <div class="project-content">
-                <p> What makes this project special is that it not only provides a comprehensive understanding of Tableau, but also gives you an inside look at how I implement real professional projects in my work.<br>
+                <p>What makes this project special is that it not only provides a comprehensive understanding of Tableau, but also gives you an inside look at how I implement real professional projects in my work.<br>
 
-                    Through this project, I have gain hands-on experience with:<br>
+                    Through this project, I have gained hands-on experience with:<br>
                     🔍 Data Visualization: Learn to create dynamic and interactive dashboards.<br>
                     📊 Data Analysis: Dive deep into data to uncover insights and trends.<br>
                     📈 Best Practices: Understand the methodologies and strategies I use in my professional projects to deliver impactful results.<br>
-                    </p>
+                </p>
             </div>
             <div class="image-gallery">
-             
-                <img src="images/hr1.png" alt="Tableau Screenshot 1" onclick="openLightbox();currentSlide(2)">
-                <img src="images/hr2.png" alt="Tableau Dashboard Screenshot 2" onclick="openLightbox();currentSlide(3)">
-                <img src="images/hr3.png" alt="Tableau Dashboard Screenshot 3" onclick="openLightbox();currentSlide(4)">
-                
+                <img src="images/hr1.png" alt="Tableau Screenshot 1" onclick="openLightbox(this.src)">
+                <img src="images/hr2.png" alt="Tableau Dashboard Screenshot 2" onclick="openLightbox(this.src)">
+                <img src="images/hr3.png" alt="Tableau Dashboard Screenshot 3" onclick="openLightbox(this.src)">
             </div>
         </div>
 
         <a href="index.html#project-section" class="btn">Back to Portfolio</a>
     </div>
 
-    <!-- Lightbox -->
-   <!-- <div id="lightbox" class="lightbox">
-        <span class="close cursor" onclick="closeLightbox()">&times;</span>
-        <div class="lightbox-content">
-            <div class="lightbox-slide">
-                <img src="images/blog-1.jpg" alt="Power BI Dashboard Screenshot 1">
-            </div>
-            <div class="lightbox-slide">
-                <img src="images/blog-2.jpg" alt="Power BI Dashboard Screenshot 2">
-            </div>
-            <div class="lightbox-slide">
-                <img src="image3.png" alt="Power BI Dashboard Screenshot 3">
-            </div>
-            <div class="lightbox-slide">
-                <img src="image2.png" alt="Project Screenshot 1">
-            </div>
-            <div class="lightbox-slide">
-                <img src="image3.png" alt="Project Screenshot 2">
-            </div>
-            <div class="lightbox-slide">
-                <img src="image4.png" alt="Project Screenshot 3">
-            </div>
-
-            Next/previous controls
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
-        </div>
+    <!-- Lightbox container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="">
     </div>
 
-    <script src="js/scripts.js"></script>-->
+    <!-- JavaScript for Lightbox -->
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = "block";
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = "none";
+        }
+    </script>
+
 </body>
 </html>
